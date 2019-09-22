@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* El CSS siguiente esta pensando primero para moviles y luego para
+   Escritiorio*/
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(0.5em + 1vh);
+}
+
+/* El estilo base para moviles */
+body {
+     background-color: #112935;             /*cambiando el color de fondo del body  */
+    color: white;                          /*Poniendo blancas las letras */ 
+    font-family: 'Montserrat', sans-serif;  /*Poniendo la fuente */
+    text-align: center;                       /*Poniendo el texto al frente */
+    font-weight: 400;                       /*Poniendo mas oscura la letra */
+}
+
+.header {
+    display: flex;                      /*Indicando como distribuiremos el contenido */
+    justify-content: space-between      /*Pone los items del flex con una distancia entre ellos */
+}
+
+.src-only {
+    display: none;                  /*Esconden el contenedor cuando se corre en movil */
+}
+
+.hide-mobile {
+    display: none;                  
+}
+
+p{
+    font-size: 0.75em;          /*Estableciendo el tamano de letra */
+    padding: 1rem;              /*Estableciendo el padinng en rem para que no dependa del elemento padre sino del elemento raiz */
+    line-height: 25px;          /*Define la altura del contenido de p  */
+}
+
+.logo {     
+    width: 90px;              /*Establece el tamano del logo */
+    margin: 1em;
+}
+
+.options {                              /*Establece el tamano y propiedades de los logos para el menu de movil- el icono de la hamburguesa y de la X  */
+    color: inherit;                     /*Hereda el color del elemento padre blanco*/
+    text-decoration: none;              /*Le quita la decoracion al texto */
+    position: relative;                 /*Establece la posicion segun su posicion normal mas los elementos top y right de abajo */
+    top: 30%;                   
+    right: 95%;
+
+    font-size: 1.5rem;          /*tamano de fuente*/
+
+    display: flex;              /*tipo de display*/
+    flex-wrap: wrap;            /*Especifica que si en necesario los elementos se uniran de manera wrap */
+    align-items: flex-start;    /*Alinea los items */
+
+}
+.options i:last-child {
+    font-size: 1.6rem;      /*cambiandole el tamano a uno de los iconos del menu */
+}
+
+/* Big area */
+.big-hero img {
+    width: 150px;           /*cambiando el tamano de la imagen de nestor*/
+}                   
+
+.big-hero h2 {
+    font-size: 1.875em;     /*Estableciendo el tamano de fuente en el h2 */
+    font-weight: 700;   
+    letter-spacing: 0.002em;    /*Estableciendo el espaciado entre letras del h2 */
+    margin-top: 1em ;           /*estableciendo la medida del margen del h2 de arriba */
+}
+
+.big-hero p {
+    font-size: 0.7em;;      
+    color: #D7DEE6;         /*cambiando color y tamano de fuente de p */
+
+}
+
+/* Social links*/
+.social-links{                  /*Poniendo los iconos de twitter, github */
+    list-style: none;           /*Le quita el estilo de lista */
+    padding: 0;                 /*Los pone a la par */
+    margin-top: 3em;            /*Los ubica segun el margen de arriba */
+    display: flex;              /*Tipo de display en flex */
+    flex-direction: row;        /*Los pone en filas */
+    justify-content: center     /*Los pone al centro */
+
+}
+
+.social-links li a{         /*establece propiedades de link a los iconos y les cambia tamano de fuente */
+    color: #D7DEE6;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+
+.green-area {                   /*fondo color verde */
+    background-color: #0AC693;
+}
+
+
+.post {                             /*le configura el espaciado a los post */
+    padding: 1em;
+    margin-bottom: -2px;
+}
+.post h2 {
+    text-transform: uppercase;          /*Configurando el h2 de post*/
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 1em;
+}
+
+.post ul {                              /*Le quita el estilo de lista */
+    list-style: none;
+}
+
+.post ul li {
+    min-height: 300px;                      /*Configura el tamano de los elementos de la lista */
+    max-width: 350px;
+    margin: 2rem auto;
+}
+
+.post ul li article {
+    overflow: hidden;                       /*Configura cada tarjeta de los posts con color blanco, bordde, alinea el texto a la izq. */
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: left;
+    padding-bottom: 2em;
+}
+
+.post article img{
+    height: 150px;                          /*Establece las imagenes para que quepan ahi y mantengan su ratio adentro de las tarjetas de posts */
+    width: 100%;
+    object-fit: cover;
+}
+
+.post article h3 {
+    color: #0D5061;
+    margin-top: 2em;
+    padding: 0em 1rem;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post article p {
+    color:#112935;
+    font-size: 0.75em;
+    padding: 1rem;
+    line-height: 25px;
+}
+
+/* About */
+
+.about{
+    margin-top: 2em;
+
+   /* here */
+    /* overflow: hidden; */
+}
+
+.about h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 2em;
+}
+
+
+
+/* --here  */
+/* .bio-info {
+   width: 50%;
+   float: left;
+
+} */
+
+
+
+
+
+.bio-info img{
+   width: 200px;
+
+}
+
+.bio-info p{
+    font-size: 16px;
+    padding: 2em;
+    text-align: left;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 1em;
+
+/*
+here */
+    /* width: 50%;
+    float: left; */
+
+
+}
+
+.contact * + * {
+    margin-top: 1.5em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    /* here */
+    /* padding: 2em; */
+}
+
+.contact-form input, .contact-form textarea{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0px 2em;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* Decorando placeholder */
+
+::-webkit-input-placeholder {
+    color: #D7DEE6;
+}
+
+:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; }
+
+::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; }
+
+:-ms-input-placeholder { color: #D7DEE6; }
+
+.contact-form input[type=submit] {
+    background-color: #F74442;
+    font-weight: 400;
+    color: white;
+    font-size: 1em;
+    
+        /* here */
+        /* padding: 1rem 2rem;
+        border: none;
+        border-radius: 0px 2em;
+        font-size: 1em;
+        width: 40%; */
+   
+}
+
+.black-decoration{
+    background-image: url("../images/decoracion_oscura_small.svg");
+}
+
+footer{
+    background-color: #0D5061;
+    color:#D7DEE6;
+
+    /* here */
+    /* font-size: 1.3em; */
+}
+
+footer .social-links {
+    margin: 0;
+
+    
+}
+
+/* here */
+/* footer i {
+    font-size: 75px;
+    padding:  0px 50px 10px 15px;
+} */
+
+
+
+
+.menu {
+    background-color: #112935;
+    position: absolute;
+    z-index: 20;
+    top: 60px;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+}
+
+.menu {
+    list-style: none;
+    text-align: left;
+    padding: 1em;
+}
+.menu li {
+    display: block;
+    padding: 0.5em;
+    margin-top: 5px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* Pesonalizando estilo para tablets*/
+@media only screen and (min-width: 768px) {
+
+    .post ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .post ul li {
+        min-height: 350px;
+        max-height: 3500px;
+        margin: 1rem 2rem;
+        flex: 1 0 300px;
+    }
+
+
+    .logo {
+        width: 150px;
+        margin: 1.5em;
+    }
+
+    .show-desktop {
+        display: block;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .menu {
+        background-color: #112935;
+        position: static;
+        z-index: 20;
+        width: auto;
+        height:auto;
+        display: flex;
+        margin-top: 1em;
+    }
+
+
+
+
+    /*TODO: FALTA CSS */
+}
+
+@media only screen and (min-width: 1024px) {
+.menu li a {
+    font-size: 1.3em;
+}
+.menu li a:hover {
+    font-size: 1.3em;
+    color: red;    
+}
+        
+.fa-arrow-circle-down{
+              
+    font-size: 4rem;
+    margin-bottom: 3%; 
+    color: #0AC693; 
+    padding: 2%;
+}
+        
+.big-hero p {   
+    font-size: 1.1em;
+    
+    
+}
+.big-hero ul i {
+    font-size: 75px;
+    padding:  0px 10px 10px 15px;
+    margin-top: -25em;
+}     
+
+.green-area h2{
+    font-size: 1.5em;
+    
+}
+
+.about{
+    margin-top: 2em;
+
+   
+    overflow: hidden; 
+}
+.about h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 1em;
+
+    
+
+    width: 50%;
+    float: left; 
+
+
+}
+
+.contact-form input[type=submit] {
+    background-color: #F74442;
+    font-weight: 400;
+    color: white;
+    font-size: 1em;
+    
+        
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 0px 2em;
+        font-size: 1em;
+        width: 40%; 
+   
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 20%;
+    padding: 2em; 
+}
+
+
+ .bio-info {
+   width: 50%;
+   float: left;
+
+} 
+.bio-info p {
+    font-size: 1em;
+    padding: 60px;
+}
+
+
+ footer i {
+    font-size: 75px;
+    padding:  0px 50px 10px 15px;
+} 
+
+footer{
+    background-color: #0D5061;
+    color:#D7DEE6;
+
+   
+    font-size: 1.3em; 
+}
+
+
+
+
+}
+@media only screen and (min-width: 1440px) {
+
+    /*TODO: FALTA CSS */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+}
